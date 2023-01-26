@@ -1,0 +1,35 @@
+*{
+    margin: o;
+}
+.contenedor{
+    width: 85%;
+    max-width: 850px;
+    background-color: rgb(211, 201, 201);
+    padding: 20px;
+    border-radius: 5px;
+    display: content;
+    align-items: center;
+}
+
+h1{
+    font-family: monospace;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+button{
+    padding: 12px;
+    padding-right: 12px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: rgb(77, 1, 42);
+    color: white;
+}

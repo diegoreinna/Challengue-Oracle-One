@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+    <title>Encriptador Challengue One</title>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="hijo">
+
+        <h1>Encriptador Challengue one Next Education</h1>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" id="mensaje" placeholder="Mensaje">
+                    <button id="encriptar" onclick="encriptar();">Encriptar</button>
+                </td>
+                <td>
+                    <button onclick="copiartexto()">copiar</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="resultado" placeholder="Resultado">
+                    <button id="desencriptar" onclick="desencriptar();">Desencriptar</button>
+                </td>
+                <td>
+                    <button onclick="copiarenc()">copiar</button>
+                </td>
+            </tr>
+        </table>
+
+        </div>
+    </div>
+
+
+        <script>
+            const texto = document.querySelector("#mensaje");
+            const encriptacion = document.querySelector("#resultado");
+            const btnen = document.querySelector("#encriptar");
+            const btndes = document.querySelector("#desencriptar");
+
+
+        function encriptar(){
+
+            var mensaje = texto.value;
+            var mensajencriptado = mensaje
+            .replaceAll("e", "enter")
+            .replaceAll("i", "imes")
+            .replaceAll("a", "ai")
+            .replaceAll("o", "ober")
+            .replaceAll("u", "ufat");
+
+
+
+            encriptacion.value = mensajencriptado;
+
+        }
+
+        function desencriptar(){
+
+            var mensajencriptado = texto.value;
+            var mensaje = mensajencriptado
+            .replaceAll("enter", "e")
+            .replaceAll("imes", "i")
+            .replaceAll("ai", "a")
+            .replaceAll("ober", "o")
+            .replaceAll("ufat", "u");
+
+            encriptacion.value = mensaje;
+
+        }
+
+        function copiartexto(){
+            var mensajeEncriptado = texto.value;
+            navigator.clipboard.writeText(mensajeEncriptado);
+            alert("texto copiado!");
+         }
+         function copiarenc(){
+            var mensajeEncriptado = resultado.value;
+            navigator.clipboard.writeText(mensajeEncriptado);
+            alert("texto copiado!");
+         }
+            </script>
+
+
+
+
+
+</body>
+</html>
